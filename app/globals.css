@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Oi&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: 
+    url('/images/bg-image.png') center top / contain repeat fixed, /* Background utama */
+    radial-gradient(circle at center, white 20%, transparent 50%), /* Efek putih di tengah */
+    linear-gradient(to right, rgba(255, 0, 0, 0.3), white 40%, white 60%, rgba(0, 0, 255, 0.3)); /* Efek gradasi samping */
+  background-blend-mode: normal, overlay, overlay;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 2px, transparent 2px, transparent 4px);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+
+.special-text {
+  font-family: "Oi", cursive;
+}
