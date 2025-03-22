@@ -5,25 +5,45 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background: white;
+}
+
+.bg-hero-gradient {
   background: 
-    url('/images/bg-image.png') center top / contain repeat fixed, /* Background utama */
-    radial-gradient(circle at center, white 20%, transparent 50%), /* Efek putih di tengah */
-    linear-gradient(to right, rgba(255, 0, 0, 0.3), white 40%, white 60%, rgba(0, 0, 255, 0.3)); /* Efek gradasi samping */
+    radial-gradient(circle at center, white 10%, transparent 50%),
+    linear-gradient(to right, rgba(255, 0, 0, 0.2), white 30%, white 70%, rgba(0, 0, 255, 0.2)),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, white 100%);
   background-blend-mode: normal, overlay, overlay;
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+.bg-highlight-gradient {
   background: 
-    repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 2px, transparent 2px, transparent 4px),
-    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 2px, transparent 2px, transparent 4px);
-  mix-blend-mode: multiply;
-  pointer-events: none;
+      radial-gradient(circle at center, white 10%, transparent 50%),
+      linear-gradient(to right, rgba(255, 0, 0, 0.2), white 30%, white 70%, rgba(0, 0, 255, 0.2)),
+      linear-gradient(to top, rgba(255, 255, 255, 0) 70%, white 100%);
+  background-blend-mode: normal, overlay, overlay;
 }
-
 
 .special-text {
   font-family: "Oi", cursive;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.animate-gradient-move {
+  background-size: 200% 200%;
+  animation: gradient-move 6s infinite linear;
+}
+
+.hover\:animate-gradient-shift:hover {
+  animation: gradient-shift 1s linear forwards;
 }
