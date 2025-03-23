@@ -26,14 +26,14 @@ const Navtop = () => {
     }, []);
 
     return (
-        <div className='fixed px-8 py-1 flex justify-between w-full z-20'>
+        <div className='fixed px-3 py-1 flex justify-between w-full z-20'>
             <div className='flex items-center gap-2 '>
                 <img src="/images/logometavfest.png" alt="Logo" className='md:w-10 w-6'/>
-                <h1 className='text-black font-bold md:text-4xl text-xl'>MetaVFest</h1>
+                <h1 className='text-black font-bold md:text-4xl text-[19px]'>MetaVFest</h1>
             </div>
-            <div className='px-3 py-1 bg-white/5 backdrop-blur-md rounded-2xl md:w-54 '>
+            <div className='sm:px-6 px-1 py-1 bg-white/5 backdrop-blur-md rounded-2xl'>
                 <p className='text-black'>Starting In</p>
-                <h1 className='text-black md:text-xl font-semibold'>
+                <h1 className='text-black md:text-xl text-[10px] font-semibold'>
                 {timeLeft.days} Days : {timeLeft.hours} Hours : {timeLeft.minutes} Minutes
                 </h1>
             </div>

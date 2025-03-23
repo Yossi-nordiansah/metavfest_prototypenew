@@ -177,7 +177,7 @@ const MetaVFestFAQPage = () => {
     </div>
 
     {/* Contact Section */}
-    <div className="relative container mx-auto px-4 pt-6 pb-20">
+    <div className="relative container mx-auto px-4 pt-6 pb-24">
         <div className="text-center">
             <h3 className="text-xl sm:text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">
                 Still have questions?
