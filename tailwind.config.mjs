@@ -7,6 +7,9 @@ const config = {
   ],
   theme: {
     extend: {
+      animation: {
+        marquee: "marquee 10s linear infinite",
+      },
       keyframes: {
         flicker: {
           "0%, 100%": { filter: "drop-shadow(0 0 5px #0096CF)" },
@@ -16,10 +19,14 @@ const config = {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        marquee: {
+          from: { transform: "translateX(100%)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         flicker: "flicker 2s infinite ease-in-out",
-        float: "float 3s ease-in-out infinite", // ✅ Pastikan ini ada!
+        float: "float 3s ease-in-out infinite", 
       },
       colors: {
         background: "var(--background)",

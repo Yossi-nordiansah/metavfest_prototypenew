@@ -26,7 +26,7 @@ const Navtop = () => {
     }, []);
 
     return (
-        <div className='fixed px-3 py-1 flex justify-between w-full z-20'>
+        <div className='fixed px-8 py-1 flex justify-between w-full z-20'>
             <div className='flex items-center gap-2 '>
                 <img src="/images/logometavfest.png" alt="Logo" className='md:w-10 w-6'/>
                 <h1 className='text-black font-bold md:text-4xl text-xl'>MetaVFest</h1>

@@ -9,6 +9,8 @@ import Speakers from "./_components/speakers.jsx";
 import Partners from "./_components/partners.jsx";
 import EventHighlights from "./_components/eventHighlights.jsx";
 import TicketPurchaseModal from "./_components/TicketPurchaseModal.jsx";
+import GuestContainer from "./_components/GuestContainer.jsx";
+import PartnerContainer from "./_components/PartnerContainer.jsx";
 
 export default function Home() {
   return (
@@ -19,8 +21,8 @@ export default function Home() {
       <Title/>
       <WarTicket/>
       <RegularTicket/>
-      <Speakers/>
-      <Partners/>
+      <GuestContainer/>
+      <PartnerContainer/>
       <Faq/>
       <TicketPurchaseModal/>
     </div>
