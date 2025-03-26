@@ -1,17 +1,27 @@
 const MyComponent = () => {
   return (
-    <div className="relative w-full flex items-center justify-center text-center">
+      <div className="relative w-full flex items-center justify-center text-center">
         {/* Background Image Absolute */}
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: "url('/images/pattern-title.png')", backgroundPosition: "center", backgroundSize: "160% 100%"}}></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80"
+          style={{
+            backgroundImage: "url('/images/pattern-title.png')",
+            backgroundPosition: "center",
+            backgroundSize: "160% 100%",
+          }}
+        ></div>
 
         {/* Konten */}
         <div className="relative z-10 text-black px-6 md:py-56 py-24">
-            <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">METAVFEST 2025</h1>
-            <p className="text-lg md:text-xl drop-shadow-md">
-            Your ultimate guide to the anime, gaming & crypto community event
-            </p>
+          <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg mb-4">
+            METAVFEST 2025
+          </h1>
+          <p className="text-lg md:text-xl drop-shadow-md">
+            Your ultimate guide to the premier Web3 & crypto gathering, with
+            anime and gaming as exciting side attractions!
+          </p>
         </div>
-    </div>
+      </div>
   );
 };
 

@@ -47,3 +47,87 @@ body {
 .hover\:animate-gradient-shift:hover {
   animation: gradient-shift 1s linear forwards;
 }
+
+/* Styling utama untuk carousel */
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e;
+  overflow: visible;
+}
+
+/* Tombol navigasi */
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  z-index: 10;
+  transition: background 0.3s;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+/* Layout carousel */
+.carousel {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  transition: transform 1s ease-in-out;
+}
+
+/* Efek gambar */
+.carousel-item {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Efek blur dan skala untuk gambar kecil */
+.small {
+  transform: scale(0.7);
+  filter: blur(4px);
+  opacity: 0.5;
+}
+
+/* Gambar utama yang besar */
+.large {
+  transform: scale(1);
+  filter: blur(0);
+  opacity: 1;
+}
+
+/* Transisi efek */
+.transition-slide {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out, filter 1s ease-in-out;
+}
+
+/* Overlay judul */
+.overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+

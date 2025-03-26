@@ -16,10 +16,10 @@ export default function Home() {
   return (
     <div className="h-full">
       <Hero/>
+      {/* <WarTicket/> */}
       {/* <StatsPage/> */}
       <EventHighlights/>
       <Title/>
-      <WarTicket/>
       <RegularTicket/>
       <GuestContainer/>
       <PartnerContainer/>

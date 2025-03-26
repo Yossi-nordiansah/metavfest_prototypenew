@@ -24,7 +24,7 @@ export default function LayoutWrapper({ children }) {
       {!shouldHideLayout && <Navtop />}
       {!shouldHideLayout && <Navbar />}
       {children}
-      {/* {!shouldHideLayout && <Footer />} */}
+      {!shouldHideLayout && <Footer />}
     </>
   );
 }
