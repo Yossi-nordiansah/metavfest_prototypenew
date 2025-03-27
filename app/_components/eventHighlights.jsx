@@ -63,7 +63,7 @@ const EventHighlights = () => {
 
     return (
         <>
-        <div className="text-center mb-8">
+        <div className="text-center md:mb-8 mb-0">
         {/* Title & Description */}
         <p className="px-4 text-2xl sm:text-4xl font-bold bg-black bg-clip-text text-transparent">
           MetaVFest - The Future of Web3 &
@@ -87,17 +87,17 @@ const EventHighlights = () => {
         </p>
       </div>
 
-        <div className="flex min-h-screen items-center justify-center bg-white p-6 overflow-hidden">
+        <div className="flex min-h-screen items-center justify-center p-6 overflow-hidden">
             <div className="relative w-full max-w-6xl h-screen max-h-[600px]">
                 <button 
-                    className="absolute left-4 top-1/2 -translate-y-1/2 z-40 bg-white bg-opacity-20 hover:bg-opacity-40 text-white p-2 rounded-full transition-all"
+                    className="absolute md:left-4 -left-1 top-1/2 -translate-y-1/2 z-40 bg-white bg-opacity-20 hover:bg-opacity-40 text-white p-2 rounded-full transition-all"
                     onClick={prevSlide}
                 >
                     ❮
                 </button>
                 
                 <button 
-                    className="absolute right-4 top-1/2 -translate-y-1/2 z-40 bg-white bg-opacity-20 hover:bg-opacity-40 text-white p-2 rounded-full transition-all"
+                    className="absolute sm:right-4 -right-1 top-1/2 -translate-y-1/2 z-40 bg-white bg-opacity-20 hover:bg-opacity-40 text-white p-2 rounded-full transition-all"
                     onClick={nextSlide}
                 >
                     ❯
@@ -116,9 +116,9 @@ const EventHighlights = () => {
                         
                         let positionClass = "";
                         if (isPrimary) {
-                            positionClass = "left-1/4 -translate-x-1/2";
+                            positionClass = "hidden md:block left-1/4 -translate-x-1/2";
                         } else if (isSecondary) {
-                            positionClass = "left-3/4 -translate-x-1/2";
+                            positionClass = "md:left-3/4 left-1/2 -translate-x-1/2";
                         } else if (index === (activeIndex - 1 + events.length) % events.length) {
                             positionClass = "left-0 -translate-x-3/4";
                         } else {
@@ -133,7 +133,7 @@ const EventHighlights = () => {
                                 onClick={() => focused && setSelectedEvent(event)}
                             >
                                 <div className={`relative overflow-hidden rounded-lg shadow-lg 
-                                               ${focused ? "w-[430px] h-[30rem]" : "w-64 h-80"} 
+                                               ${focused ? "md:w-[430px] w-80 h-[30rem]" : "w-64 h-80"} 
                                                transition-all duration-500`}>
                                     <div className="absolute inset-0 w-full h-full">
                                         <Image
@@ -168,10 +168,10 @@ const EventHighlights = () => {
 
             {/* Popup Modal */}
             {selectedEvent && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50 backdrop-blur-md">
-                    <div className="bg-white p-8 rounded-lg shadow-2xl max-w-2xl text-center relative">
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-[100] backdrop-blur-md">
+                    <div className="bg-white w-11/12 md:p-8 p-2 h-fit max-h-[95vh] rounded-lg shadow-2xl max-w-2xl text-center relative">
                         <button
-                            className="absolute top-3 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold"
+                            className="absolute top-3 right-4 text-red-600 hover:text-gray-900 text-3xl font-bold"
                             onClick={() => setSelectedEvent(null)}
                         >
                             &times;
@@ -183,8 +183,8 @@ const EventHighlights = () => {
                             height={350}
                             className="w-full h-56 object-cover rounded-lg"
                         />
-                        <h3 className="text-3xl font-extrabold text-gray-800 mt-4">{selectedEvent.popUpTitle}</h3>
-                        <p className="text-gray-700 text-lg leading-relaxed mt-2">{selectedEvent.description}</p>
+                        <h3 className="md:text-3xl text-2xl font-extrabold text-gray-800 mt-4">{selectedEvent.popUpTitle}</h3>
+                        <p className="text-gray-700 md:text-lg text-base leading-relaxed p-2 mt-2">{selectedEvent.description}</p>
                     </div>
                 </div>
             )}
