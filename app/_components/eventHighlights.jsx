@@ -87,6 +87,7 @@ const EventHighlights = () => {
         </p>
       </div>
 
+        <h1 className="mt-16 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center">METAVFEST <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Event Highlight</span></h1>
         <div className="flex min-h-screen items-center justify-center p-6 overflow-hidden">
             <div className="relative w-full max-w-6xl h-screen max-h-[600px]">
                 <button 

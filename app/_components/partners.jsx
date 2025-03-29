@@ -27,7 +27,7 @@ const Partners = () => {
 
     return (
         <div className="">
-          <h2 className="sm:text-4xl text-xl font-bold text-slate-800 lg:mb-10 mb-7 text-center">Partners</h2>
+          <h2 className="sm:text-4xl text-xl font-bold text-slate-800 lg:mb-16 mb-7 text-center">Partners</h2>
           <Marquee  speed={50}>
             <div className="flex sm:space-x-14 space-x-2">
               {partners.map((partner, index) => (

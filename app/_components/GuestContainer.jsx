@@ -1,7 +1,5 @@
-// src/components/AlternatingGrid.js
 import React from 'react';
 import Speakers from './speakers';
-import Partners from './partners';
 
 const GuestContainer = () => {
     return (

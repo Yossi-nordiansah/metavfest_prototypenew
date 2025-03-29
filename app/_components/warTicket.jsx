@@ -32,7 +32,7 @@ const WarTicket = () => {
       }, []);
     
       return (
-        <div className="flex flex-col items-center justify-center py-16 bg-gradient-to-b from-blue-950/50 to-transparent text-yellow-400 px-4">
+        <div className="flex flex-col items-center justify-center py-16 bg-gradient-to-b from-white to-transparent text-yellow-400 px-4">
           <h1 className="text-3xl md:text-5xl font-extrabold mb-6 text-white text-center">🎟️ War Ticket I</h1>
           <div className="text-3xl md:text-4xl font-bold bg-blue-800 px-4 md:px-6 py-3 md:py-4 rounded-lg shadow-lg text-center">
         <span>{timeLeft.days}D</span> :

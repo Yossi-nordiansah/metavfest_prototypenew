@@ -43,10 +43,11 @@ const Navtop = () => {
                     MetaVFest
                 </h1>
             </div>
-            <div className='sm:px-6 px-1 py-1 bg-slate-100 backdrop-blur-md rounded-2xl'>
-                <p className='text-black'>Starting In</p>
-                <h1 className='text-black md:text-xl text-[10px] font-semibold'>
-                {timeLeft.days} Days : {timeLeft.hours} Hours : {timeLeft.minutes} Minutes
+            <div className='px-2 py-1 bg-slate-100 backdrop-blur-md rounded-xl text-xs text-black text-center'>
+                <p>Starts In</p>
+                <h1 className='font-semibold text-sm md:text-base'>
+                    {timeLeft.days} d 
+                    <span className="hidden sm:inline"> : {timeLeft.hours} h : {timeLeft.minutes} m</span>
                 </h1>
             </div>
         </div>
