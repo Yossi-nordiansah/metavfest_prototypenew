@@ -58,7 +58,7 @@ export default function EventTickets() {
       discount: "Use Referral Code",
       quota: "No Limit",
       saleStart: "2025-03-26T00:00:00",
-      deadline: "2025-05-11T23:59:00"
+      deadline: "2025-08-11T23:59:00"
     }
   ];
 
