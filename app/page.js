@@ -23,14 +23,11 @@ export default function Home() {
       <Hero/>
       <EventHighlights/>
       <Title/>
-      {/* <StatsPage/> */}
-      {/* <WarTicket/> */}
       <div ref={ticketRef}>
         <RegularTicket />
       </div>
       <GuestContainer/>
       <Guests/>
-      {/* <Speakers/> */}
       <PartnerContainer/>
       <Faq/>
       <TicketPurchaseModal/>

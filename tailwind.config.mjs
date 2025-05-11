@@ -49,7 +49,9 @@ const config = {
       scrollBehavior: ["responsive"], // ✅ Pindahkan ke sini
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp')
+  ],
 };
 
 export default config;
